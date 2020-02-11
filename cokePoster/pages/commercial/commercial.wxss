@@ -1,0 +1,61 @@
+.myCanvas {
+  position: absolute;
+}
+
+.pTopImg {
+  background: #0478d1;
+}
+
+.pContent {
+  background: #1b82d1;
+}
+
+.bottomView {
+  width: 100%;
+}
+
+.pDate {
+  float: left;
+  width: 50%;
+  background: #f8f9fd;
+}
+
+.pQRcode {
+  float: left;
+  width: 50%;
+  background: #f8f9fd;
+}
+
+.pName {
+  float: left;
+  width: 50%;
+  background: #f8f9fd;
+}
+
+.mt {
+  margin: 1rem 2rem 0rem 2rem;
+}
+
+.mb {
+  margin-bottom: 2rem;
+}
+
+.input {
+  width: 92%;
+  padding: 0.2rem;
+  border-radius: 5px;
+  border: solid 1px #f00;
+  background: #f8f9fd;
+  font-size: 14px;
+  margin: 0.5rem auto 0rem auto;
+}
+
+.textarea {
+  width: 92%;
+  padding: 0.2rem;
+  border-radius: 5px;
+  border: solid 1px #f00;
+  background: #f8f9fd;
+  font-size: 14px;
+  margin: 0.5rem auto 0rem auto;
+}
