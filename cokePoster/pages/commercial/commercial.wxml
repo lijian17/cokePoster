@@ -1,0 +1,21 @@
+<!-- 海报生成 -->
+<canvas canvas-id="myCanvas" class="myCanvas" bindlongtap="longClickCanvas" style="width:{{g.w}}px; height:{{g.h}}px; left:{{-g.w}}px; top:{{-g.h}}px;"></canvas>
+<canvas canvas-id="pTopImg" class="pTopImg" bindtap="longClickCanvas" data-objName="pTopImg" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" bindtouchcancel="touchCancel" disable-scroll="true" style="width:{{g.w}}px; height:{{pTopImg.sh}}px;"></canvas>
+<canvas canvas-id="pContent" class="pContent" bindtap="longClickCanvas" data-objName="pContent" style="width:{{g.w}}px; height:{{pContent.h}}px;"></canvas>
+<view class="bottomView">
+  <canvas canvas-id="pDate" class="pDate" bindtap="longClickCanvas" data-objName="pDate" style="width:{{pDate.w}}px; height:{{pDate.h}}px;"></canvas>
+  <canvas canvas-id="pQRcode" class="pQRcode" bindtap="longClickCanvas" data-objName="pQRcode" style="width:{{pQRcode.sw}}px; height:{{pQRcode.sh}}px;"></canvas>
+  <canvas canvas-id="pName" class="pName" bindtap="longClickCanvas" data-objName="pName" style="width:{{pName.sw}}px; height:{{pName.sh}}px;"></canvas>
+  <view style="clear:both;" />
+</view>
+<canvas canvas-id="qrcode" style="width:{{pQRcode.w}}px; height:{{pQRcode.h}}px; position:absolute; left:{{-pQRcode.w}}px; top:{{-pQRcode.h}}px; background:#ff6600;" />
+<input wx:if="{{pName.inputShow}}" value="{{pName.text}}" class="input" bindconfirm="changeName" bindblur="changeName" maxlength="140" cursor-spacing="5" focus="true" type="text" placeholder="请输入..." />
+<textarea wx:if="{{pContent.inputShow}}" value="{{pContent.text}}" class="textarea" bindconfirm="changeContent" bindblur="changeContent" maxlength="300" cursor-spacing="5" focus="true" auto-height="true" placeholder="请输入..." />
+<textarea wx:if="{{pQRcode.inputShow}}" value="{{pQRcode.text}}" class="textarea" bindconfirm="changeQRcode" bindblur="changeQRcode" maxlength="300" cursor-spacing="5" focus="true" auto-height="true" placeholder="请输入..." />
+<button type="primary" class="mt" bindtap='longClickCanvasTopTmg'>更换海报图片</button>
+<button type="primary" class="mt" bindtap='longClickCanvasContent'>更换主体内容</button>
+<button type="primary" class="mt" bindtap='longClickCanvasQRcode'>更换图片二维码</button>
+<button type="primary" class="mt" bindtap='clickCanvasQRcode'>更换文本二维码</button>
+<button type="primary" class="mt" bindtap='longClickCanvasName'>更换公众号名称</button>
+<button type="primary" class="mt" bindtap="clickPreview">预览海报</button>
+<button type="primary" class="mt mb" bindtap='clickSave'>保存海报</button>
